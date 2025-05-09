@@ -1,0 +1,75 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=examenlavara,dc=org> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# examenlavara.org
+dn: dc=examenlavara,dc=org
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: examenlavara Organization
+dc: examenlavara
+
+# Alumnos, examenlavara.org
+dn: ou=Alumnos,dc=examenlavara,dc=org
+ou: Alumnos
+objectClass: organizationalUnit
+objectClass: top
+
+# alumnos, Alumnos, examenlavara.org
+dn: cn=alumnos,ou=Alumnos,dc=examenlavara,dc=org
+cn: alumnos
+gidNumber: 500
+objectClass: posixGroup
+objectClass: top
+
+# alumno alumnio, alumnos, Alumnos, examenlavara.org
+dn: cn=alumno alumnio,cn=alumnos,ou=Alumnos,dc=examenlavara,dc=org
+givenName: alumno
+sn: alumnio
+cn: alumno alumnio
+uid: aalumnio
+uidNumber: 1000
+gidNumber: 500
+homeDirectory: /home/users/aalumnio
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+
+# 1eso1, Alumnos, examenlavara.org
+dn: ou=1eso1,ou=Alumnos,dc=examenlavara,dc=org
+ou: 1eso1
+objectClass: organizationalUnit
+objectClass: top
+
+# 1eso1, 1eso1, Alumnos, examenlavara.org
+dn: cn=1eso1,ou=1eso1,ou=Alumnos,dc=examenlavara,dc=org
+cn: 1eso1
+gidNumber: 501
+objectClass: posixGroup
+objectClass: top
+
+# lavara1 lavara1, 1eso1, 1eso1, Alumnos, examenlavara.org
+dn: cn=lavara1 lavara1,cn=1eso1,ou=1eso1,ou=Alumnos,dc=examenlavara,dc=org
+givenName: lavara1
+sn: lavara1
+cn: lavara1 lavara1
+uid: llavara1
+uidNumber: 1001
+gidNumber: 501
+homeDirectory: /home/users/llavara1
+loginShell: /bin/bash
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 8
+# numEntries: 7

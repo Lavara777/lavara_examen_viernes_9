@@ -1,5 +1,5 @@
-# organisational unit for directores department
-dn: ou=directores,dc=example,dc=org
+# organisational unit for ['alumnos', '3esoA', '3esoB', '3esoC', '3esoD', '3esoE', '3esoF', '3esoG', '3bachA', '3bachB', '3bachC', '3bachD', '3bachE', 'GSasir1', 'GSasir2', 'GSdaw1', 'GSdaw2'] department
+dn: ou=['alumnos', '3esoA', '3esoB', '3esoC', '3esoD', '3esoE', '3esoF', '3esoG', '3bachA', '3bachB', '3bachC', '3bachD', '3bachE', 'GSasir1', 'GSasir2', 'GSdaw1', 'GSdaw2'],dc=examenlavara,dc=org
 changetype: add
 objectClass: organizationalUnit
-ou: directores
+ou: ['alumnos', '3esoA', '3esoB', '3esoC', '3esoD', '3esoE', '3esoF', '3esoG', '3bachA', '3bachB', '3bachC', '3bachD', '3bachE', 'GSasir1', 'GSasir2', 'GSdaw1', 'GSdaw2']
